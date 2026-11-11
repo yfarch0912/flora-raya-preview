@@ -170,6 +170,51 @@ p{line-height:1.75;font-size:.96rem;color:var(--cream)}
 .vid-wrap.playing .vid-btn{opacity:0;pointer-events:none}
 /* qr */
 .qr-img{width:190px;margin:14px auto;border-radius:16px;border:4px solid #fff7e6;background:#fff;padding:6px}
+
+/* ===== BESPOKE: RUMAH KACA / KONSERVATORI BOTANI ===== */
+.glass{border:1px solid rgba(140,190,150,.55);box-shadow:0 14px 34px rgba(0,0,0,.45),inset 0 0 0 3px rgba(7,48,31,.85),inset 0 0 0 4px rgba(233,196,106,.35),inset 0 0 42px rgba(120,220,160,.07);position:relative}
+.glass::before{content:"";position:absolute;inset:7px;border:1px solid rgba(160,220,175,.22);border-radius:15px;pointer-events:none;background:linear-gradient(115deg,transparent 42%,rgba(255,255,255,.055) 50%,transparent 58%)}
+.specimen{display:inline-block;margin-top:10px;background:linear-gradient(180deg,#f8efdb,#ecdcae);color:#173d27;border:1px solid #b99b57;border-radius:4px;padding:5px 12px 6px;font-family:Verdana,sans-serif;font-size:.66rem;letter-spacing:.08em;box-shadow:0 4px 10px rgba(0,0,0,.4)}
+.specimen i{font-family:Georgia,serif;text-transform:none;letter-spacing:0;font-size:.74rem;color:#5a4310}
+.specimen b{color:#0b3d2e;letter-spacing:.14em}
+@keyframes bobY{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.bob{animation:bobY 5.4s ease-in-out infinite}.bob.d1{animation-delay:-1.8s}.bob.d2{animation-delay:-3.4s}
+@keyframes breathZ{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
+.breath{animation:breathZ 11s ease-in-out infinite}
+@keyframes twinkleDot{0%,100%{opacity:.12;transform:scale(.7)}50%{opacity:.95;transform:scale(1.25)}}
+.ffly{position:absolute;width:7px;height:7px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 12px 4px rgba(255,220,130,.55);pointer-events:none;animation:twinkleDot 3.8s ease-in-out infinite;z-index:3}
+@keyframes lampFlicker{0%,100%{opacity:.92;box-shadow:0 0 22px 9px rgba(255,196,86,.5)}42%{opacity:.75;box-shadow:0 0 14px 6px rgba(255,196,86,.35)}55%{opacity:1;box-shadow:0 0 26px 11px rgba(255,205,100,.6)}70%{opacity:.82;box-shadow:0 0 16px 7px rgba(255,196,86,.4)}}
+.lamp{position:absolute;width:13px;height:13px;border-radius:50%;background:#ffd98a;border:2px solid rgba(233,196,106,.8);pointer-events:none;animation:lampFlicker 4.6s ease-in-out infinite;z-index:3}
+@keyframes dewPulse{0%,100%{filter:brightness(1)}50%{filter:brightness(1.22)}}
+.dew{animation:dewPulse 5s ease-in-out infinite}
+/* countdown: medali kaca embun konservatori */
+.cd-box{border-radius:50%!important;width:78px;height:78px;min-width:78px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;border:2px solid rgba(255,255,255,.5)!important}
+.cd-box::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.38) 50%,transparent 70%);transform:translateX(-130%);animation:glassSweep 4.8s ease-in-out infinite}
+.cd-box:nth-child(2)::after{animation-delay:-1.2s}.cd-box:nth-child(3)::after{animation-delay:-2.4s}.cd-box:nth-child(4)::after{animation-delay:-3.6s}
+@keyframes glassSweep{0%,55%{transform:translateX(-130%)}85%,100%{transform:translateX(130%)}}
+.cd-box b{font-size:1.4rem;line-height:1.05}
+/* mempelai: busur kaca konservatori */
+.arch-card{border-radius:200px 200px 22px 22px!important;padding-top:34px;overflow:hidden}
+.arch-card::after{content:"";position:absolute;left:50%;top:14px;bottom:14px;width:1px;background:linear-gradient(180deg,transparent,rgba(190,235,200,.35) 25%,rgba(190,235,200,.35) 75%,transparent);pointer-events:none}
+.arch-card .couple-photo{border-radius:170px 170px 14px 14px}
+/* galeri herbarium hidup */
+.gal-item.herb{background:#f6ecd2;border:1px solid #c9ab63;border-radius:6px;padding:10px 10px 0;box-shadow:0 14px 30px rgba(0,0,0,.5),inset 0 0 0 4px #f6ecd2,inset 0 0 0 5px rgba(160,125,55,.5)}
+.gal-item.herb img{height:282px;border-radius:3px}
+.gal-item.herb .gal-cap{background:transparent;color:#274435;font-family:Georgia,serif;padding:10px 4px 12px}
+.gal-item.herb .gal-cap b{display:block;font-family:Verdana,sans-serif;font-size:.62rem;letter-spacing:.2em;color:#7a5c14}
+.gal-item.herb .gal-cap i{color:#5a4310;font-size:.8rem}
+.gal-item.full .gal-cap i{display:block;color:#ffd8a8;font-size:.74rem}
+/* dresscode: kelopak contoh kain */
+.sw{border-radius:78% 6px 78% 6px!important;transform:rotate(-45deg);border:3px solid rgba(255,247,230,.9)}
+.swatch-cell{animation:bobY 5.6s ease-in-out infinite}
+.swatch-cell:nth-child(2){animation-delay:-1.1s}.swatch-cell:nth-child(3){animation-delay:-2.2s}.swatch-cell:nth-child(4){animation-delay:-3.3s}.swatch-cell:nth-child(5){animation-delay:-4.4s}
+.swatch-cell .sw-l{margin-top:9px}
+/* kupu-kupu hinggap: lintasan multi-titik dengan jeda hinggap */
+@keyframes perchFly{0%{transform:translate(0,0) rotate(-8deg)}10%{transform:translate(52px,26px) rotate(6deg)}16%,26%{transform:translate(96px,64px) rotate(-3deg) scale(1)}31%{transform:translate(70px,110px) rotate(10deg)}42%,52%{transform:translate(18px,150px) rotate(2deg)}58%{transform:translate(-38px,108px) rotate(-10deg)}69%,79%{transform:translate(-64px,52px) rotate(-2deg)}86%{transform:translate(-30px,16px) rotate(7deg)}100%{transform:translate(0,0) rotate(-8deg)}}
+.hinggap{animation:perchFly 26s ease-in-out infinite}
+@keyframes spinSlow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.spin-slow{animation:spinSlow 46s linear infinite}
+
 /* bottom nav + music */
 #bottomNav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(430px,100%);z-index:50;display:none;background:rgba(5,32,20,.92);backdrop-filter:blur(6px);border-top:1px solid rgba(233,196,106,.4);padding:8px 4px calc(8px + env(safe-area-inset-bottom))}
 body.opened #bottomNav{display:flex}
@@ -222,7 +267,7 @@ footer{padding:30px 20px 110px;text-align:center;position:relative;z-index:1}
       <img class="bedf r tegak s3" src="assets/undangya/flora-raya/flower-krisan.webp" alt="">
       <img class="bfly melayang" style="top:16%;left:12%" src="assets/undangya/flora-raya/butterfly.webp" alt="">
       <img class="bfly melayang f2" style="top:26%;right:10%" src="assets/undangya/flora-raya/butterfly.webp" alt="">
-      <img class="bfly melayang f3" style="top:8%;right:34%;width:38px" src="assets/undangya/flora-raya/butterfly.webp" alt="">
+      <img class="bfly hinggap" style="top:10%;left:38%;width:40px" src="assets/undangya/flora-raya/butterfly.webp" alt="">
       <img class="petal" style="left:8%;animation-duration:11s" src="assets/undangya/flora-raya/petal.webp" alt="">
       <img class="petal" style="left:22%;animation-duration:14s;animation-delay:-5s;width:15px" src="assets/undangya/flora-raya/petal.webp" alt="">
       <img class="petal" style="left:36%;animation-duration:12s;animation-delay:-8s" src="assets/undangya/flora-raya/petal.webp" alt="">
@@ -266,12 +311,14 @@ footer{padding:30px 20px 110px;text-align:center;position:relative;z-index:1}
 
     <!-- 2. PEMBUKA -->
     <section id="sambutan">
+      <span class="ffly" style="top:16%;left:9%"></span><span class="ffly" style="top:24%;right:11%;animation-delay:-1.4s"></span><span class="ffly" style="bottom:18%;left:14%;animation-delay:-2.6s"></span>
       <img class="leaf-corner lc-tl tegak" src="assets/undangya/flora-raya/leaf-pisang.webp" alt="" aria-hidden="true">
       <div class="sec-inner glass rv rv-flip">
         <img class="decor tegak" src="assets/undangya/flora-raya/flower-kamboja2.webp" alt="" aria-hidden="true">
         <p class="kicker">Pembuka</p>
         <h2 class="script">Assalamu’alaikum Wr. Wb.</h2>
         <p style="margin-top:12px">Dengan memohon rahmat dan ridha Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu pada pernikahan kami yang akan diselenggarakan di tengah taman tropis Flora Raya — tempat bunga-bunga raksasa bermekaran menyambut hari bahagia.</p>
+        <span class="specimen rv rv-pop" data-d="2"><b>SPESIMEN No. 01</b> · <i>Plumeria rubra</i> — Kamboja, penjaga gerbang rumah kaca</span>
         <p style="margin-top:10px"><i>“Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan untukmu agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.”</i><br><span class="small">— QS. Ar-Rum: 21</span></p>
       </div>
     </section>
@@ -285,16 +332,18 @@ footer{padding:30px 20px 110px;text-align:center;position:relative;z-index:1}
           <p class="kicker">Mempelai</p>
           <h2 class="script">Dua Hati, Satu Taman</h2>
         </div>
-        <div class="glass rv rv-left" style="margin-top:18px">
-          <img class="couple-photo" src="assets/undangya/flora-raya/bride.webp" alt="Mempelai wanita Meyzsa Putri Ananda" width="540" height="720" loading="lazy">
+        <div class="glass arch-card rv rv-left" style="margin-top:18px">
+          <img class="couple-photo breath" src="assets/undangya/flora-raya/bride.webp" alt="Mempelai wanita Meyzsa Putri Ananda" width="540" height="720" loading="lazy">
           <p class="name-big" style="margin-top:14px">Meyzsa Putri Ananda, S.Pd.</p>
           <p>Putri dari Bapak H. Muhammad Ridwan<br>&amp; Ibu Hj. Siti Aminah</p>
+          <span class="specimen"><b>SPESIMEN · PENGANTIN WANITA</b> · <i>Phalaenopsis amabilis</i> — Anggrek Bulan</span>
           <p style="margin-top:8px"><a class="ig" href="https://instagram.com/meyzsa.contoh" target="_blank" rel="noopener">@meyzsa.contoh</a></p>
         </div>
-        <div class="glass rv rv-right" data-d="1" style="margin-top:18px">
-          <img class="couple-photo" src="assets/undangya/flora-raya/groom.webp" alt="Mempelai pria Ahmad Fahrezzi Pratama" width="540" height="720" loading="lazy">
+        <div class="glass arch-card rv rv-right" data-d="1" style="margin-top:18px">
+          <img class="couple-photo breath" style="animation-delay:-5s" src="assets/undangya/flora-raya/groom.webp" alt="Mempelai pria Ahmad Fahrezzi Pratama" width="540" height="720" loading="lazy">
           <p class="name-big" style="margin-top:14px">Ahmad Fahrezzi Pratama, S.T.</p>
           <p>Putra dari Bapak H. Bambang Sutrisno<br>&amp; Ibu Hj. Ratna Dewi</p>
+          <span class="specimen"><b>SPESIMEN · PENGANTIN PRIA</b> · <i>Monstera deliciosa</i> — Monstera, daun raksasa</span>
           <p style="margin-top:8px"><a class="ig" href="https://instagram.com/fahrezzi.contoh" target="_blank" rel="noopener">@fahrezzi.contoh</a></p>
         </div>
       </div>
@@ -318,12 +367,14 @@ footer{padding:30px 20px 110px;text-align:center;position:relative;z-index:1}
 
     <!-- 5. COUNTDOWN + ACARA -->
     <section id="acara">
+      <span class="lamp" style="top:20px;left:16px"></span><span class="lamp" style="top:20px;right:16px;animation-delay:-2.2s"></span>
       <img class="leaf-corner lc-br tegak" src="assets/undangya/flora-raya/leaf-pakis.webp" alt="" aria-hidden="true">
       <div class="sec-inner">
         <div class="glass rv rv-drop">
           <img class="decor tegak s2" src="assets/undangya/flora-raya/flower-flamboyan.webp" alt="" aria-hidden="true">
           <p class="kicker">Hitung Mundur</p>
           <h2 class="script">Menuju Hari Mekar</h2>
+          <span class="specimen dew"><b>MEDALI KACA EMBUN</b> · <i>Victoria amazonica</i> — teratai raksasa penanda waktu</span>
           <div class="countdown" id="countdown" data-target="2027-06-12T08:00:00+07:00" aria-label="Hitung mundur menuju akad nikah">
             <div class="cd-box rv rv-pop"><b id="cdD">0</b><span>Hari</span></div>
             <div class="cd-box rv rv-pop" data-d="1"><b id="cdH">0</b><span>Jam</span></div>
@@ -366,14 +417,14 @@ footer{padding:30px 20px 110px;text-align:center;position:relative;z-index:1}
           <p class="small">Geser ke kanan–kiri untuk berjalan menyusuri taman kami. Ketuk foto untuk memperbesar.</p>
         </div>
         <div class="gal-rail rv rv-up" id="galRail" style="margin-top:16px">
-          <figure class="gal-item"><img src="assets/undangya/flora-raya/galeri-1.webp" alt="Pasangan berjalan di lorong bunga sepatu raksasa" loading="lazy"><figcaption class="gal-cap">Lorong Bunga Sepatu</figcaption></figure>
-          <figure class="gal-item"><img src="assets/undangya/flora-raya/galeri-2.webp" alt="Pasangan di taman tropis 2" loading="lazy"><figcaption class="gal-cap">Kolam Teratai</figcaption></figure>
-          <figure class="gal-item"><img src="assets/undangya/flora-raya/galeri-3.webp" alt="Pasangan di taman tropis 3" loading="lazy"><figcaption class="gal-cap">Lengkung Bougenville</figcaption></figure>
-          <figure class="gal-item"><img src="assets/undangya/flora-raya/galeri-4.webp" alt="Pasangan di taman tropis 4" loading="lazy"><figcaption class="gal-cap">Di Antara Heliconia</figcaption></figure>
-          <figure class="gal-item"><img src="assets/undangya/flora-raya/galeri-5.webp" alt="Pasangan di taman tropis 5" loading="lazy"><figcaption class="gal-cap">Potret Monstera</figcaption></figure>
-          <figure class="gal-item"><img src="assets/undangya/flora-raya/galeri-6.webp" alt="Pasangan di taman tropis 6" loading="lazy"><figcaption class="gal-cap">Tari Daun Pakis</figcaption></figure>
-          <figure class="gal-item"><img src="assets/undangya/flora-raya/galeri-7.webp" alt="Pasangan di taman tropis 7" loading="lazy"><figcaption class="gal-cap">Karangan Bunga</figcaption></figure>
-          <figure class="gal-item"><img src="assets/undangya/flora-raya/galeri-8.webp" alt="Pasangan di taman tropis 8" loading="lazy"><figcaption class="gal-cap">Pelukan Senja Taman</figcaption></figure>
+          <figure class="gal-item herb"><img src="assets/undangya/flora-raya/galeri-1.webp" alt="Pasangan berjalan di lorong bunga sepatu raksasa" loading="lazy"><figcaption class="gal-cap"><b>HERBARIUM · PLAT 01</b>Bunga Sepatu<br><i>Hibiscus rosa-sinensis</i></figcaption></figure>
+          <figure class="gal-item full"><img src="assets/undangya/flora-raya/galeri-2.webp" alt="Pasangan di taman tropis 2" loading="lazy"><figcaption class="gal-cap">Kolam Teratai<i>Nelumbo nucifera · Teratai Suci</i></figcaption></figure>
+          <figure class="gal-item herb"><img src="assets/undangya/flora-raya/galeri-3.webp" alt="Pasangan di taman tropis 3" loading="lazy"><figcaption class="gal-cap"><b>HERBARIUM · PLAT 03</b>Bougenville<br><i>Bougainvillea spectabilis</i></figcaption></figure>
+          <figure class="gal-item full"><img src="assets/undangya/flora-raya/galeri-4.webp" alt="Pasangan di taman tropis 4" loading="lazy"><figcaption class="gal-cap">Di Antara Heliconia<i>Heliconia psittacorum · Heliconia</i></figcaption></figure>
+          <figure class="gal-item herb"><img src="assets/undangya/flora-raya/galeri-5.webp" alt="Pasangan di taman tropis 5" loading="lazy"><figcaption class="gal-cap"><b>HERBARIUM · PLAT 05</b>Monstera<br><i>Monstera deliciosa</i></figcaption></figure>
+          <figure class="gal-item full"><img src="assets/undangya/flora-raya/galeri-6.webp" alt="Pasangan di taman tropis 6" loading="lazy"><figcaption class="gal-cap">Tari Daun Pakis<i>Nephrolepis exaltata · Pakis Boston</i></figcaption></figure>
+          <figure class="gal-item herb"><img src="assets/undangya/flora-raya/galeri-7.webp" alt="Pasangan di taman tropis 7" loading="lazy"><figcaption class="gal-cap"><b>HERBARIUM · PLAT 07</b>Kamboja Putih<br><i>Plumeria obtusa</i></figcaption></figure>
+          <figure class="gal-item full"><img src="assets/undangya/flora-raya/galeri-8.webp" alt="Pasangan di taman tropis 8" loading="lazy"><figcaption class="gal-cap">Pelukan Senja Taman<i>Delonix regia · Flamboyan</i></figcaption></figure>
         </div>
         <div class="gal-dots" id="galDots" aria-hidden="true"></div>
         <p class="gal-count rv rv-pop" id="galCount">Foto 1 dari 8</p>
@@ -382,6 +433,7 @@ footer{padding:30px 20px 110px;text-align:center;position:relative;z-index:1}
 
     <!-- 7. VIDEO TEASER -->
     <section id="cuplikan">
+      <span class="lamp" style="top:26px;left:12px;animation-delay:-1s"></span><span class="lamp" style="top:26px;right:12px;animation-delay:-3.1s"></span>
       <div class="sec-inner glass rv rv-flip">
         <img class="decor tegak s3" src="assets/undangya/flora-raya/flower-matahari.webp" alt="" aria-hidden="true">
         <p class="kicker">Cuplikan Video</p>
@@ -401,13 +453,14 @@ footer{padding:30px 20px 110px;text-align:center;position:relative;z-index:1}
         <img class="decor tegak" src="assets/undangya/flora-raya/flower-krisan.webp" alt="" aria-hidden="true">
         <p class="kicker">Dresscode</p>
         <h2 class="script">Palet Taman</h2>
-        <p>Kami mengundang Anda tampil sewarna taman: fuchsia, oranye senja, hijau zamrud, atau krem gading. Hindari putih polos, ya.</p>
+        <span class="specimen"><b>PALET KELOPAK</b> · <i>contoh kain sewarna kelopak spesimen</i></span>
+        <p style="margin-top:10px">Kami mengundang Anda tampil sewarna taman: fuchsia, oranye senja, hijau zamrud, atau krem gading. Hindari putih polos, ya.</p>
         <div class="swatches">
-          <div><div class="sw" style="background:#d6336c"></div><div class="sw-l">Fuchsia</div></div>
-          <div><div class="sw" style="background:#f76707"></div><div class="sw-l">Oranye</div></div>
-          <div><div class="sw" style="background:#14532d"></div><div class="sw-l">Zamrud</div></div>
-          <div><div class="sw" style="background:#e9c46a"></div><div class="sw-l">Emas</div></div>
-          <div><div class="sw" style="background:#f3e5c0"></div><div class="sw-l">Gading</div></div>
+          <div class="swatch-cell"><div class="sw bob" style="background:#d6336c"></div><div class="sw-l">Fuchsia</div></div>
+          <div class="swatch-cell"><div class="sw bob" style="background:#f76707"></div><div class="sw-l">Oranye</div></div>
+          <div class="swatch-cell"><div class="sw bob" style="background:#14532d"></div><div class="sw-l">Zamrud</div></div>
+          <div class="swatch-cell"><div class="sw bob" style="background:#e9c46a"></div><div class="sw-l">Emas</div></div>
+          <div class="swatch-cell"><div class="sw bob" style="background:#f3e5c0"></div><div class="sw-l">Gading</div></div>
         </div>
       </div>
     </section>
@@ -445,7 +498,7 @@ footer{padding:30px 20px 110px;text-align:center;position:relative;z-index:1}
     <section id="tamu">
       <img class="leaf-corner lc-tr tegak" src="assets/undangya/flora-raya/semak.webp" alt="" aria-hidden="true">
       <div class="sec-inner glass rv rv-up">
-        <img class="decor tegak" src="assets/undangya/flora-raya/flower-teratai.webp" alt="" aria-hidden="true">
+        <img class="decor tegak" src="assets/undangya/flora-raya/flower-hydrangea.webp" alt="" aria-hidden="true">
         <p class="kicker">Hashtag &amp; Galeri Tamu</p>
         <h2 class="script">#MeyzsaFahrezzi</h2>
         <p>Abadikan momen Anda dengan tagar <b style="color:var(--gold)">#MeyzsaFahrezzi</b>, dan unggah foto terbaik Anda ke galeri tamu di perangkat ini.</p>
@@ -460,7 +513,7 @@ footer{padding:30px 20px 110px;text-align:center;position:relative;z-index:1}
     <!-- 12. RSVP + DINDING UCAPAN -->
     <section id="rsvp">
       <div class="sec-inner glass rv rv-flip">
-        <img class="decor tegak s2" src="assets/undangya/flora-raya/flower-matahari.webp" alt="" aria-hidden="true">
+        <img class="decor tegak s2" src="assets/undangya/flora-raya/flower-mawar-pink.webp" alt="" aria-hidden="true">
         <p class="kicker">RSVP &amp; Dinding Ucapan</p>
         <h2 class="script">Konfirmasi &amp; Doa</h2>
         <form id="rsvpForm" novalidate>
@@ -478,7 +531,7 @@ footer{padding:30px 20px 110px;text-align:center;position:relative;z-index:1}
     <!-- 13. BUKU TAMU & QR CHECK-IN -->
     <section id="bukutamu">
       <div class="sec-inner glass rv rv-left">
-        <img class="decor tegak" src="assets/undangya/flora-raya/flower-anggrek.webp" alt="" aria-hidden="true">
+        <img class="decor tegak" src="assets/undangya/flora-raya/flower-lily.webp" alt="" aria-hidden="true">
         <p class="kicker">Buku Tamu &amp; Check-in</p>
         <h2 class="script">QR Check-in</h2>
         <p>Tunjukkan kode QR ini di meja penerima tamu untuk check-in cepat, atau isi buku tamu digital di bawah.</p>
@@ -498,7 +551,7 @@ footer{padding:30px 20px 110px;text-align:center;position:relative;z-index:1}
     <section id="amplop">
       <img class="leaf-corner lc-tl tegak s3" src="assets/undangya/flora-raya/leaf-palem.webp" alt="" aria-hidden="true">
       <div class="sec-inner glass rv rv-right">
-        <img class="decor tegak s2" src="assets/undangya/flora-raya/flower-krisan.webp" alt="" aria-hidden="true">
+        <img class="decor tegak s2" src="assets/undangya/flora-raya/flower-dahlia.webp" alt="" aria-hidden="true">
         <p class="kicker">Amplop Digital</p>
         <h2 class="script">Tanda Kasih</h2>
         <p>Doa restu Anda adalah hadiah terindah. Bagi yang berkenan memberikan tanda kasih, tersedia amplop digital demo berikut:</p>
@@ -526,7 +579,7 @@ footer{padding:30px 20px 110px;text-align:center;position:relative;z-index:1}
     <!-- 15. TURUT MENGUNDANG -->
     <section id="turut">
       <div class="sec-inner glass rv rv-up">
-        <img class="decor tegak" src="assets/undangya/flora-raya/flower-kamboja2.webp" alt="" aria-hidden="true">
+        <img class="decor tegak" src="assets/undangya/flora-raya/flower-peony.webp" alt="" aria-hidden="true">
         <p class="kicker">Turut Mengundang</p>
         <h2 class="script">Keluarga Besar</h2>
         <p style="margin-top:10px">Keluarga Besar H. Muhammad Ridwan<br>Keluarga Besar H. Bambang Sutrisno<br>Kel. Besar Alm. H. Abdul Ananda<br>Kel. Besar Alm. H. Soedarmadji<br>Seluruh kerabat &amp; sahabat kedua mempelai</p>
@@ -538,7 +591,7 @@ footer{padding:30px 20px 110px;text-align:center;position:relative;z-index:1}
       <img class="leaf-corner lc-bl tegak" src="assets/undangya/flora-raya/leaf-monstera.webp" alt="" aria-hidden="true">
       <img class="leaf-corner lc-br tegak s2" src="assets/undangya/flora-raya/leaf-pakis.webp" alt="" aria-hidden="true">
       <div class="sec-inner glass rv rv-flip">
-        <img class="decor tegak" src="assets/undangya/flora-raya/flower-flamboyan.webp" alt="" aria-hidden="true">
+        <img class="decor tegak" src="assets/undangya/flora-raya/flower-sakura.webp" alt="" aria-hidden="true">
         <p class="kicker">Penutup</p>
         <h2 class="script">Terima Kasih</h2>
         <img class="hero-photo rv rv-zoom" style="margin:16px 0" src="assets/undangya/flora-raya/hero.webp" alt="Meyzsa dan Fahrezzi" loading="lazy">
